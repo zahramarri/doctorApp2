@@ -37,10 +37,11 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@id/tVDoctorStatus"
+                app:layout_constraintEnd_toStartOf="@id/tVDoctorStatus"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/iVDoctorProfilePhoto"
-                app:layout_constraintVertical_bias="0.15" />
+                app:layout_constraintVertical_bias="0.15"
+                tools:text="Rose Kennedy" />
 
             <TextView
                 android:id="@+id/tVDoctorStatus"
@@ -50,9 +51,10 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@id/tVDoctorName"
+                app:layout_constraintStart_toEndOf="@+id/tVDoctorName"
                 app:layout_constraintTop_toBottomOf="@id/iVDoctorProfilePhoto"
-                app:layout_constraintVertical_bias="0.15" />
+                app:layout_constraintVertical_bias="0.15"
+                tools:text="online" />
 
             <TextView
                 android:id="@+id/tVDoctorSpecialty"
@@ -62,7 +64,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tVDoctorStatus"
-                app:layout_constraintVertical_bias="0.15" />
+                app:layout_constraintVertical_bias="0.15"
+                tools:text="Psychology of anxiety, sleep disorder and social anxiety" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/bTSendMessage"
@@ -146,7 +149,8 @@
             android:layout_height="0dp"
             android:layout_marginHorizontal="16dp"
             android:layout_weight="1"
-            app:cornerRadius="16dp" />
+            app:cornerRadius="16dp"
+            tools:text="ask"/>
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
