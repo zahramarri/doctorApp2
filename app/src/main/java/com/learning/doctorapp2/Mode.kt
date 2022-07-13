@@ -1,4 +1,4 @@
-package layout
+package com.learning.doctorapp2
 
 enum class Mode {
     VideoCallOnline,
