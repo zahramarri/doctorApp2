@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">doctorApp2</string>
     <string name="bTSendMessageText">send message</string>
-    <string name="tVInformationText">Choose counseling mode you prefer:</string>
+    <string name="tVChooseInformationText">Choose counseling mode you prefer:</string>
+    <string name="tVUserNameHintText">name</string>
+    <string name="tVUserPhoneNumberHintText">phone number</string>
+    <string name="tVFillInformationText">Please enter your name and phone number for the consultant to call you:</string>
+    <string name="bTRegisterText">register</string>
 </resources>
