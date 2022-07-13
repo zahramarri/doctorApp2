@@ -1,6 +1,6 @@
 package com.learning.doctorapp2
 
 enum class Mode {
-    VideoCallOnline,
-    VoiceCallOnline
+    OnlineVideoCall,
+    OnlineVoiceCall
 }

@@ -10,7 +10,7 @@ object Test {
     val consultant3: Consultant = Consultant("d003", "Robert Smith",
         Status.Offline, Speciality.EducationalPsychologists, R.drawable.robert_doctor)
 
-    val consultancy1: Consultancy = Consultancy("c001", 10, Mode.VideoCallOnline)
-    val consultancy2: Consultancy = Consultancy("c002", 30, Mode.VoiceCallOnline)
-    val consultancy3: Consultancy = Consultancy("c003", 60, Mode.VideoCallOnline)
+    val consultancy1: Consultancy = Consultancy("c001", 10, Mode.OnlineVideoCall)
+    val consultancy2: Consultancy = Consultancy("c002", 30, Mode.OnlineVoiceCall)
+    val consultancy3: Consultancy = Consultancy("c003", 60, Mode.OnlineVideoCall)
 }

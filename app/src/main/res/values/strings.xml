@@ -2,7 +2,4 @@
     <string name="app_name">doctorApp2</string>
     <string name="bTSendMessageText">send message</string>
     <string name="tVInformationText">Choose counseling mode you prefer:</string>
-    <string name="tVMode10mText">10 minutes of counseling</string>
-    <string name="tVMode30mText">30 minutes of counseling</string>
-    <string name="tVMode60mText">60 minutes of counseling</string>
 </resources>
