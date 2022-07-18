@@ -21,11 +21,11 @@
 
     <EditText
         android:inputType="text"
-        android:id="@+id/tVUserName"
+        android:id="@+id/eTVUserName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:hint="@string/tVUserNameHintText"
+        android:hint="@string/eTVUserNameHintText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,15 +34,15 @@
 
     <EditText
         android:inputType="phone"
-        android:id="@+id/tVUserPhoneNumber"
+        android:id="@+id/eTVUserPhoneNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="8dp"
-        android:hint="@string/tVUserPhoneNumberHintText"
+        android:hint="@string/eTVUserPhoneNumberHintText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tVUserName" />
+        app:layout_constraintTop_toBottomOf="@id/eTVUserName" />
 
     <Button
         android:id="@+id/bTRegister"
@@ -52,7 +52,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tVUserPhoneNumber" />
+        app:layout_constraintTop_toBottomOf="@id/eTVUserPhoneNumber" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
