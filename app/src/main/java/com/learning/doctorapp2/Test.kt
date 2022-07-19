@@ -15,4 +15,14 @@ object Test {
     val consultancy1: Consultancy = Consultancy("c001", 10, Mode.OnlineVoiceCall)
     val consultancy2: Consultancy = Consultancy("c002", 30, Mode.OnlineVoiceCall)
     val consultancy3: Consultancy = Consultancy("c003", 60, Mode.OnlineVoiceCall)
+
+    fun getConsultant(id: String?): Consultant? {
+        var consultantWanted: Consultant? = null
+        for (consultant in consultantsList) {
+            if(consultant.iD == id) {
+                consultantWanted = consultant
+            }
+        }
+        return consultantWanted
+    }
 }
