@@ -1,5 +1,6 @@
 package com.learning.doctorapp2
 
+import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -26,6 +27,8 @@ class ConsultancyPageActivity : AppCompatActivity() {
                 binding.eTVUserPhoneNumber.text.isNotBlank()) {
                 saveInSharedPref()
             }
+
+            startActivityMentalCheck()
         }
     }
     private fun saveInSharedPref() {
@@ -51,5 +54,10 @@ class ConsultancyPageActivity : AppCompatActivity() {
             binding.eTVUserName.setText(sharedPref.getString("user name", "null"))
             binding.eTVUserPhoneNumber.setText(sharedPref.getString("user phone number", "null"))
         }
+    }
+
+    private fun startActivityMentalCheck() {
+        val intent = Intent(this, MentalCheckActivity::class.java)
+        startActivity(intent)
     }
 }
