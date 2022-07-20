@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MentalCheckActivity">
+
+    <TextView
+        android:id="@+id/tvMentalQuestionsInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/tvMentalQuestionsInformationText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.16000003" />
+
+    <CheckBox
+        android:id="@+id/checkBoxQuestion1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/checkBoxQuestion1Text"
+        app:layout_constraintBottom_toTopOf="@id/checkBoxQuestion2"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxQuestion2"
+        app:layout_constraintTop_toBottomOf="@id/tvMentalQuestionsInformation"
+        app:layout_constraintVertical_bias="0.19999999"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <CheckBox
+        android:id="@+id/checkBoxQuestion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/checkBoxQuestion2Text"
+        app:layout_constraintBottom_toTopOf="@id/checkBoxQuestion3"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxQuestion3"
+        app:layout_constraintTop_toBottomOf="@id/checkBoxQuestion1" />
+
+    <CheckBox
+        android:id="@+id/checkBoxQuestion3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkBoxQuestion3Text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkBoxQuestion2" />
+
+    <Button
+        android:id="@+id/btDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btDoneText"
+        app:layout_constraintTop_toBottomOf="@id/checkBoxQuestion3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias=".35"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,4 +6,9 @@
     <string name="eTVUserPhoneNumberHintText">phone number</string>
     <string name="tVFillInformationText">Please enter your name and phone number for the consultant to call you:</string>
     <string name="bTRegisterText">register</string>
+    <string name="checkBoxQuestion1Text">I\'ve been feeling good recent days.</string>
+    <string name="checkBoxQuestion2Text">I believe that the whole world is being rolled to a good destination.</string>
+    <string name="checkBoxQuestion3Text">I have been experiencing good sleep sessions during last weeks.</string>
+    <string name="tvMentalQuestionsInformationText">Please CHECK if the three following statements are true about you.</string>
+    <string name="btDoneText">done</string>
 </resources>
