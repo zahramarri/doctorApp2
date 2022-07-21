@@ -16,8 +16,8 @@ object Test {
     val consultancy2: Consultancy = Consultancy("c002", 30, Mode.OnlineVoiceCall)
     val consultancy3: Consultancy = Consultancy("c003", 60, Mode.OnlineVoiceCall)
 
-    fun getConsultant(id: String?): Consultant? {
-        var consultantWanted: Consultant? = null
+    fun getConsultant(id: String): Consultant {
+        lateinit var consultantWanted: Consultant
         for (consultant in consultantsList) {
             if(consultant.iD == id) {
                 consultantWanted = consultant
