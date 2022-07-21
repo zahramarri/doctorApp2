@@ -17,7 +17,8 @@ class ConsultancyPageActivity : AppCompatActivity() {
             result: ActivityResult ->
         if (result.resultCode == Activity.RESULT_OK) {
             val intent = result.data
-            Toast.makeText(this , "${intent?.getDoubleExtra(EXTRA_NAME, 0.0)}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Thank you (\"${intent?.getDoubleExtra(EXTRA_NAME, 0.0)}\")!" +
+                    " Consultant ${thisConsultant.name} will call you.", Toast.LENGTH_LONG).show()
             // Handle the Intent
         }
     }
@@ -36,8 +37,6 @@ class ConsultancyPageActivity : AppCompatActivity() {
             }
 
             startActivityMentalCheck()
-
-            Toast.makeText(this, "Consultant ${thisConsultant.name} will call you.", Toast.LENGTH_SHORT).show()
         }
     }
     private fun saveInSharedPref() {
