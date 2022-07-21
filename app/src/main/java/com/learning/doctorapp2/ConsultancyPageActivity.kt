@@ -11,21 +11,6 @@ import androidx.activity.result.contract.ActivityResultContracts
 import com.learning.doctorapp2.databinding.ActivityConsultancyPageBinding
 
 class ConsultancyPageActivity : AppCompatActivity() {
-    private fun startActivityMentalCheck() {
-//        val intent = Intent(this, MentalCheckActivity::class.java)
-//        startActivity(intent)
-
-        val startForResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-                result: ActivityResult ->
-            if (result.resultCode == Activity.RESULT_OK) {
-                val intent = result.data
-                Toast.makeText(this , intent?.getStringExtra("myStr"), Toast.LENGTH_SHORT).show()
-                // Handle the Intent
-            }
-        }
-        val intent = Intent(this , MentalCheckActivity::class.java)
-        startForResult.launch(intent)
-    }
     private lateinit var thisConsultant: Consultant
     private lateinit var binding: ActivityConsultancyPageBinding
     private val startForResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
@@ -50,8 +35,7 @@ class ConsultancyPageActivity : AppCompatActivity() {
                 saveInSharedPref()
             }
 
-            val intent = Intent(this , MentalCheckActivity::class.java)
-            startForResult.launch(intent)
+            startActivityMentalCheck()
 
             Toast.makeText(this, "Consultant ${thisConsultant.name} will call you.", Toast.LENGTH_SHORT).show()
         }
@@ -81,5 +65,8 @@ class ConsultancyPageActivity : AppCompatActivity() {
         }
     }
 
-
+    private fun startActivityMentalCheck() {
+        val intent = Intent(this , MentalCheckActivity::class.java)
+        startForResult.launch(intent)
+    }
 }
