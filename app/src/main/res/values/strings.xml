@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">doctorApp2</string>
-    <string name="bTSendMessageText">send message</string>
+    <string name="bTCallText">call</string>
     <string name="tVChooseInformationText">Choose counseling mode you prefer:</string>
     <string name="eTVUserNameHintText">name</string>
     <string name="eTVUserPhoneNumberHintText">phone number</string>

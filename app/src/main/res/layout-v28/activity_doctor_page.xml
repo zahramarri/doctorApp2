@@ -65,13 +65,13 @@
                 app:layout_constraintVertical_bias="0.2" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/bTSendMessage"
+                android:id="@+id/bTCall"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_margin="16dp"
-                android:text="@string/bTSendMessageText"
+                android:text="@string/bTCallText"
                 app:cornerRadius="16dp"
-                app:icon="@drawable/ic_baseline_mail_outline_20dp"
+                app:icon="@drawable/ic_baseline_phone_enabled_24"
                 app:iconGravity="textStart"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
