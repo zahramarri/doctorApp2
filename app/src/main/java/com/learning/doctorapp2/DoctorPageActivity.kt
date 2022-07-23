@@ -22,6 +22,13 @@ class DoctorPageActivity : AppCompatActivity() {
         binding = ActivityDoctorPageBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        if (savedInstanceState != null) {
+            with(savedInstanceState) {
+                binding.bTAskConsultancy?.visibility = getInt(STATE_BUTTON_VISIBILITY)
+                binding.bTAskConsultancy?.text = getString(STATE_BUTTON_TEXT)
+            }
+        }
+
         initViews()
 
         binding.tVModeOfConsultancy1?.setOnClickListener {
@@ -45,7 +52,7 @@ class DoctorPageActivity : AppCompatActivity() {
             startConsultancyActivity()
         }
 
-        binding.bTCall?.setOnClickListener{
+        binding.bTCall.setOnClickListener{
             val callIntent = Intent(Intent.ACTION_DIAL)
             callIntent.data = Uri.parse("tel:09124132891")
             startActivity(callIntent)
@@ -72,5 +79,20 @@ class DoctorPageActivity : AppCompatActivity() {
         binding.tVModeOfConsultancy1?.text = consultancy1.toString()
         binding.tVModeOfConsultancy2?.text = consultancy2.toString()
         binding.tVModeOfConsultancy3?.text = consultancy3.toString()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.run {
+            binding.bTAskConsultancy?.let {
+                putInt(STATE_BUTTON_VISIBILITY, it.visibility)
+                putString(STATE_BUTTON_TEXT, it.text.toString())
+            }
+        }
+        super.onSaveInstanceState(outState)
+    }
+
+    companion object {
+        private const val STATE_BUTTON_VISIBILITY = "button ask consultancy visibility"
+        private const val STATE_BUTTON_TEXT = "button ask consultancy text"
     }
 }
