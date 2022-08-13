@@ -111,7 +111,14 @@ class DoctorPageActivity : AppCompatActivity() {
     }
 
     private fun shareDoctor() {
-        TODO("Not yet implemented")
+        val sendIntent: Intent = Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, "I guess $consultant2 may help you!")
+            type = "text/plain"
+        }
+
+        val shareIntent = Intent.createChooser(sendIntent, null)
+        startActivity(shareIntent)
     }
 
     companion object {
